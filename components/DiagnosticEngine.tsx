@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, RotateCcw } from "lucide-react";
 import { createDiagnosticRun } from "@/lib/diagnostic";
