@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --unyko-ink: #05070a;
+  --unyko-night: #0b1018;
+  --unyko-ivory: #f6f1e8;
+  --unyko-gold: #d7b56d;
+  --unyko-sage: #8fb7a8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(215, 181, 109, 0.12), transparent 32rem),
+    radial-gradient(circle at 90% 20%, rgba(143, 183, 168, 0.09), transparent 28rem),
+    #05070a;
+  color: var(--unyko-ivory);
+  min-height: 100vh;
+}
+
+::selection { background: rgba(215, 181, 109, 0.28); color: #fff8e8; }
+
+.circle-grid {
+  background-image:
+    linear-gradient(rgba(246, 241, 232, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246, 241, 232, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle, black, transparent 74%);
+}
+
+.premium-card {
+  border: 1px solid rgba(246, 241, 232, 0.1);
+  background: linear-gradient(145deg, rgba(246, 241, 232, 0.075), rgba(246, 241, 232, 0.025));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(24px);
+}
+
+.gold-ring {
+  box-shadow:
+    inset 0 0 80px rgba(215, 181, 109, 0.08),
+    0 0 120px rgba(215, 181, 109, 0.16);
+}
