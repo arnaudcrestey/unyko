@@ -16,7 +16,7 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <ButtonLink href="/diagnostic">Mesurer l'Indice</ButtonLink>
+          <ButtonLink href="/diagnostic">Mesurer l&#39;Indice</ButtonLink>
         </div>
       </div>
     </header>

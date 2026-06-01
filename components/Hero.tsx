@@ -10,7 +10,7 @@ export function Hero() {
           Structurer le capital confiance.
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/65">
-          UNYKO mesure la solidité relationnelle d'une organisation : sa crédibilité, sa recommandation naturelle, sa communauté et son empreinte relationnelle.
+          UNYKO mesure la solidité relationnelle d&#39;une organisation : sa crédibilité, sa recommandation naturelle, sa communauté et son empreinte relationnelle.
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/diagnostic">Découvrir le diagnostic</ButtonLink>

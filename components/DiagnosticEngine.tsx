@@ -17,10 +17,9 @@ const scale = [
 ] as const;
 
 export function DiagnosticEngine() {
-  const [runId, setRunId] = useState(0);
+  const [questions, setQuestions] = useState<DiagnosticQuestion[]>(() => createDiagnosticRun());
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [step, setStep] = useState(0);
-  const questions = useMemo<DiagnosticQuestion[]>(() => createDiagnosticRun(), [runId]);
   const currentQuestion = questions[step];
   const isComplete = Object.keys(answers).length === questions.length;
   const scores = isComplete ? calculateScores(questions, answers) : null;
@@ -32,7 +31,7 @@ export function DiagnosticEngine() {
   }
 
   function restart() {
-    setRunId((id) => id + 1);
+    setQuestions(createDiagnosticRun());
     setAnswers({});
     setStep(0);
   }
@@ -110,7 +109,7 @@ export function DiagnosticEngine() {
             ))}
           </div>
           <div className="mt-9 flex items-center justify-between text-sm text-ivory/48">
-            <span>Répondez selon la réalité perçue, pas selon l'intention.</span>
+            <span>Répondez selon la réalité perçue, pas selon l&#39;intention.</span>
             <ArrowRight size={18} className="text-gold/70" />
           </div>
         </div>

@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-5 max-w-sm text-sm leading-7 text-ivory/60">
-            UNYKO révèle, mesure et renforce le capital confiance des organisations au sein de l'écosystème Arnaud Crestey.
+            UNYKO révèle, mesure et renforce le capital confiance des organisations au sein de l&#39;écosystème Arnaud Crestey.
           </p>
         </div>
         <div>
