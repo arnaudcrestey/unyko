@@ -16,7 +16,7 @@ export function CTASection() {
           </h2>
 
           <p className="mt-6 text-base leading-8 text-ivory/60">
-            Découvrez comment votre organisation est perçue aujourd'hui et
+            Découvrez comment votre organisation est perçue aujourd&apos;hui et
             identifiez les leviers qui renforcent sa visibilité, sa crédibilité
             et sa capacité à être recommandée par les humains comme par les
             intelligences artificielles.
