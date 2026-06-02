@@ -16,8 +16,9 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
     { id: "lis-12", dimension: "lisibilite", subDimension: "position", text: "Votre organisation occupe-t-elle une place nette dans l'esprit de ses publics prioritaires ?" },
     { id: "lis-13", dimension: "lisibilite", subDimension: "promesse", text: "Votre promesse permet-elle de comprendre le bénéfice avant les moyens utilisés ?" },
     { id: "lis-14", dimension: "lisibilite", subDimension: "mémorisation", text: "Vos prises de parole répètent-elles les bons repères sans paraître mécaniques ?" },
-    { id: "lis-15", dimension: "lisibilite", subDimension: "différenciation", text: "Votre singularité reste-t-elle lisible dans un environnement saturé de contenus générés par IA ?" }
+    { id: "lis-15", dimension: "lisibilite", subDimension: "différenciation", text: "Votre singularité reste-t-elle lisible dans un environnement saturé de contenus générés par IA ?" },
   ],
+
   credibilite: [
     { id: "cre-01", dimension: "credibilite", subDimension: "preuves", text: "Vos preuves sont-elles assez concrètes pour soutenir votre discours sans explication supplémentaire ?" },
     { id: "cre-02", dimension: "credibilite", subDimension: "cohérence", text: "Votre expérience réelle correspond-elle à ce que vos supports annoncent ?" },
@@ -33,8 +34,9 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
     { id: "cre-12", dimension: "credibilite", subDimension: "cohérence", text: "Votre présence publique reste-t-elle alignée avec votre niveau réel de maturité ?" },
     { id: "cre-13", dimension: "credibilite", subDimension: "expertise", text: "Vos prises de parole apportent-elles un discernement que l'on ne trouve pas partout ?" },
     { id: "cre-14", dimension: "credibilite", subDimension: "professionnalisme", text: "Votre organisation inspire-t-elle du sérieux avant même un rendez-vous ?" },
-    { id: "cre-15", dimension: "credibilite", subDimension: "fiabilité", text: "Votre réputation se construit-elle sur des expériences répétées plutôt que sur des promesses fortes ?" }
+    { id: "cre-15", dimension: "credibilite", subDimension: "fiabilité", text: "Votre réputation se construit-elle sur des expériences répétées plutôt que sur des promesses fortes ?" },
   ],
+
   presence: [
     { id: "pre-01", dimension: "presence", subDimension: "visibilité", text: "Votre organisation apparaît-elle dans les espaces où vos publics cherchent réellement des repères ?" },
     { id: "pre-02", dimension: "presence", subDimension: "régularité", text: "Votre présence se maintient-elle sans dépendre d'efforts ponctuels ou de pics d'activité ?" },
@@ -50,8 +52,9 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
     { id: "pre-12", dimension: "presence", subDimension: "régularité", text: "Votre présence s'appuie-t-elle sur un système plutôt que sur l'inspiration du moment ?" },
     { id: "pre-13", dimension: "presence", subDimension: "canaux", text: "Vos supports prioritaires sont-ils adaptés à la maturité de vos publics ?" },
     { id: "pre-14", dimension: "presence", subDimension: "attention", text: "Votre organisation sait-elle retenir l'attention par la justesse plutôt que par l'intensité ?" },
-    { id: "pre-15", dimension: "presence", subDimension: "continuité", text: "Votre présence installe-t-elle progressivement une familiarité professionnelle ?" }
+    { id: "pre-15", dimension: "presence", subDimension: "continuité", text: "Votre présence installe-t-elle progressivement une familiarité professionnelle ?" },
   ],
+
   autorite: [
     { id: "aut-01", dimension: "autorite", subDimension: "point de vue", text: "Votre organisation exprime-t-elle un point de vue reconnaissable sur son sujet ?" },
     { id: "aut-02", dimension: "autorite", subDimension: "expertise", text: "Votre expertise aide-t-elle vos publics à mieux décider ?" },
@@ -67,8 +70,9 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
     { id: "aut-12", dimension: "autorite", subDimension: "expertise", text: "Vos contenus montrent-ils une profondeur supérieure aux réponses génériques produites par IA ?" },
     { id: "aut-13", dimension: "autorite", subDimension: "preuves", text: "Vos preuves sont-elles reliées à une méthode identifiable ?" },
     { id: "aut-14", dimension: "autorite", subDimension: "standards", text: "Votre exigence est-elle perceptible dans vos mots, vos choix et vos livrables ?" },
-    { id: "aut-15", dimension: "autorite", subDimension: "influence", text: "Votre parole crée-t-elle un repère que d'autres peuvent citer ou transmettre ?" }
+    { id: "aut-15", dimension: "autorite", subDimension: "influence", text: "Votre parole crée-t-elle un repère que d'autres peuvent citer ou transmettre ?" },
   ],
+
   recommandabilite: [
     { id: "rec-01", dimension: "recommandabilite", subDimension: "transmission", text: "Une personne satisfaite peut-elle expliquer facilement pourquoi elle devrait vous recommander ?" },
     { id: "rec-02", dimension: "recommandabilite", subDimension: "prescription", text: "Votre organisation est-elle citée lorsque le bon besoin apparaît dans une conversation ?" },
@@ -84,20 +88,25 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
     { id: "rec-12", dimension: "recommandabilite", subDimension: "prescription", text: "Les personnes qui vous connaissent identifient-elles les bons moments pour vous prescrire ?" },
     { id: "rec-13", dimension: "recommandabilite", subDimension: "réputation", text: "Les retours à votre sujet décrivent-ils une valeur stable et reconnaissable ?" },
     { id: "rec-14", dimension: "recommandabilite", subDimension: "mémorisation", text: "Votre organisation reste-t-elle présente dans l'esprit de ses publics entre deux interactions ?" },
-    { id: "rec-15", dimension: "recommandabilite", subDimension: "désirabilité", text: "Votre organisation est-elle recommandable parce qu'elle est lisible, crédible, présente et légitime ?" }
-  ]
+    { id: "rec-15", dimension: "recommandabilite", subDimension: "désirabilité", text: "Votre organisation est-elle recommandable parce qu'elle est lisible, crédible, présente et légitime ?" },
+  ],
 };
 
 function shuffle<T>(items: T[]): T[] {
   const next = [...items];
+
   for (let index = next.length - 1; index > 0; index -= 1) {
     const randomIndex = Math.floor(Math.random() * (index + 1));
     [next[index], next[randomIndex]] = [next[randomIndex], next[index]];
   }
+
   return next;
 }
 
 export function createDiagnosticRun(): DiagnosticQuestion[] {
-  const selected = (Object.keys(questionBanks) as DimensionKey[]).flatMap((dimension) => shuffle(questionBanks[dimension]).slice(0, 5));
+  const selected = (Object.keys(questionBanks) as DimensionKey[]).flatMap(
+    (dimension) => shuffle(questionBanks[dimension]).slice(0, 5)
+  );
+
   return shuffle(selected);
 }

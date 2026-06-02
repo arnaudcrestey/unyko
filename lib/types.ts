@@ -1,8 +1,18 @@
 import type { LucideIcon } from "lucide-react";
 
-export type DimensionKey = "lisibilite" | "credibilite" | "presence" | "autorite" | "recommandabilite";
+export type DimensionKey =
+  | "lisibilite"
+  | "credibilite"
+  | "presence"
+  | "autorite"
+  | "recommandabilite";
 
-export type RecommendationLevel = "Illisible" | "Repérable" | "Crédible" | "Prescripteur" | "Incontournable";
+export type RecommendationLevel =
+  | "Illisible"
+  | "Repérable"
+  | "Crédible"
+  | "Prescripteur"
+  | "Incontournable";
 
 export type DiagnosticQuestion = {
   id: string;

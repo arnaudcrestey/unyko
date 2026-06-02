@@ -1,4 +1,14 @@
-import { BadgeCheck, CircleDot, Eye, Gem, Landmark, Network, ScanText, ShieldCheck } from "lucide-react";
+import {
+  BadgeCheck,
+  CircleDot,
+  Eye,
+  Gem,
+  Landmark,
+  Network,
+  ScanText,
+  ShieldCheck,
+} from "lucide-react";
+
 import type { DimensionDefinition } from "@/lib/types";
 
 export const navItems = [
@@ -7,60 +17,138 @@ export const navItems = [
   { href: "/rapport", label: "Rapport" },
   { href: "/offres", label: "Offres" },
   { href: "/ecosysteme", label: "Écosystème" },
-  { href: "/vitrine", label: "Vitrine" }
+  { href: "/vitrine", label: "Vitrine" },
 ] as const;
 
 export const dimensions: DimensionDefinition[] = [
   {
     key: "lisibilite",
     name: "Lisibilité",
-    question: "Comprend-on immédiatement ce que vous rendez possible ?",
-    description: "La capacité de votre organisation à être comprise, située et mémorisée sans effort dans un environnement saturé par l'IA.",
-    subDimensions: ["clarté", "position", "promesse", "mémorisation", "différenciation"],
-    Icon: ScanText
+    question: "Comprend-on clairement qui vous êtes ?",
+    description:
+      "La capacité de l'organisation à être immédiatement comprise.",
+    subDimensions: [
+      "clarté",
+      "positionnement",
+      "compréhension",
+      "différenciation",
+      "cohérence",
+    ],
+    Icon: ScanText,
   },
+
   {
     key: "credibilite",
     name: "Crédibilité",
-    question: "Pourquoi devrait-on vous prendre au sérieux ?",
-    description: "La cohérence entre votre discours, vos preuves, votre niveau d'exigence et la perception de votre expertise.",
-    subDimensions: ["preuves", "cohérence", "expertise", "professionnalisme", "fiabilité"],
-    Icon: ShieldCheck
+    question: "Pourquoi devrait-on vous croire ?",
+    description:
+      "La cohérence perçue entre ce que l'organisation affirme, démontre et incarne.",
+    subDimensions: [
+      "preuves",
+      "expertise",
+      "références",
+      "cohérence",
+      "professionnalisme",
+    ],
+    Icon: ShieldCheck,
   },
+
   {
     key: "presence",
     name: "Présence",
-    question: "Existez-vous clairement dans l'esprit de votre marché ?",
-    description: "Une visibilité utile, régulière et identifiable, qui installe votre organisation sans bruit inutile ni posture artificielle.",
-    subDimensions: ["visibilité", "régularité", "canaux", "attention", "continuité"],
-    Icon: Eye
+    question: "Existez-vous réellement dans votre environnement ?",
+    description:
+      "La présence de l'organisation dans les espaces numériques et professionnels.",
+    subDimensions: [
+      "site",
+      "contenus",
+      "linkedin",
+      "citations",
+      "visibilité",
+    ],
+    Icon: Eye,
   },
+
   {
     key: "autorite",
     name: "Autorité",
-    question: "Votre parole crée-t-elle un repère ?",
-    description: "La force de vos convictions, de votre expertise et de vos prises de position pour devenir une référence sobre et durable.",
-    subDimensions: ["point de vue", "expertise", "preuves", "standards", "influence"],
-    Icon: Landmark
+    question: "Êtes-vous identifié comme une référence ?",
+    description:
+      "La reconnaissance de l'expertise et de la légitimité de l'organisation.",
+    subDimensions: [
+      "expertise",
+      "spécialisation",
+      "légitimité",
+      "réputation",
+      "leadership",
+    ],
+    Icon: Landmark,
   },
+
   {
     key: "recommandabilite",
     name: "Recommandabilité",
-    question: "Pourquoi parlerait-on de vous au bon moment ?",
-    description: "La capacité de votre organisation à être recommandée naturellement parce qu'elle est claire, crédible, présente et légitime.",
-    subDimensions: ["transmission", "prescription", "réputation", "mémorisation", "désirabilité"],
-    Icon: BadgeCheck
-  }
+    question: "Pourquoi vous recommanderait-on ?",
+    description:
+      "La capacité de l'organisation à être recommandée par les humains et les IA.",
+    subDimensions: [
+      "transmission",
+      "réputation",
+      "confiance",
+      "citation",
+      "recommandation",
+    ],
+    Icon: BadgeCheck,
+  },
 ];
 
 export const ecosystem = [
-  { name: "SYSTIA", role: "Structurer l'activité", question: "Comment l'activité devient-elle lisible et pilotable ?", Icon: CircleDot },
-  { name: "ARHI", role: "Structurer les humains", question: "Comment les rôles, les talents et les décisions gagnent-ils en clarté ?", Icon: Gem },
-  { name: "UNYKO", role: "Mesurer la recommandabilité", question: "Pourquoi une organisation devient-elle visible, crédible et recommandable ?", Icon: Network }
+  {
+    name: "SYSTIA",
+    role: "Structurer l'activité",
+    question: "Comment l'activité devient-elle lisible et pilotable ?",
+    Icon: CircleDot,
+  },
+
+  {
+    name: "ARHI",
+    role: "Structurer les humains",
+    question: "Comment les rôles, les talents et les décisions gagnent-ils en clarté ?",
+    Icon: Gem,
+  },
+
+  {
+    name: "UNYKO",
+    role: "Développer la recommandabilité",
+    question:
+      "Pourquoi une organisation devient-elle visible, crédible et recommandable ?",
+    Icon: Network,
+  },
 ] as const;
 
 export const methodSteps = [
-  ["Lire", "Identifier ce qui rend votre organisation visible, compréhensible et crédible dans un marché augmenté par l'IA."],
-  ["Mesurer", "Transformer la lisibilité, la présence, l'autorité et la recommandabilité en scores exploitables."],
-  ["Prioriser", "Définir les actions qui renforcent votre position sans ajouter de bruit ni diluer votre exigence."]
+  [
+    "Lire",
+    "Identifier les signaux qui rendent l'organisation visible, compréhensible et crédible.",
+  ],
+
+  [
+    "Mesurer",
+    "Transformer la lisibilité, la présence, l'autorité et la recommandabilité en indicateurs exploitables.",
+  ],
+
+  [
+    "Prioriser",
+    "Définir les actions qui renforcent durablement la visibilité et la recommandation.",
+  ],
+
+  [
+    "Optimiser",
+    "Renforcer les signaux qui influencent la perception humaine et IA.",
+  ],
+
+  [
+    "Préparer l'IA",
+    "Développer la capacité de l'organisation à être comprise et recommandée par les moteurs conversationnels.",
+  ],
 ] as const;
