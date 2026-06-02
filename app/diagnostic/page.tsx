@@ -1,8 +1,4 @@
-Pour ce fichier, il faut garder **la version Codex / nouvelle direction** et supprimer tout l’ancien bloc `main`.
 
-Remplace tout le fichier par ceci :
-
-```tsx
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { DimensionGrid } from "@/components/DimensionGrid";
@@ -24,10 +20,10 @@ export default function DiagnosticPage() {
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-ivory/65">
-              L&apos;Indice UNYKO™ révèle pourquoi une organisation devient
-              visible, lisible, crédible, présente, autoritaire et
-              recommandable à l&apos;ère de l&apos;IA.
-            </p>
+  L&apos;Indice UNYKO™ révèle pourquoi une organisation devient
+  visible, lisible, crédible, présente, légitime et recommandable à
+  l&apos;ère de l&apos;IA.
+</p>
 
             <div className="mt-10">
               <ButtonLink href="/diagnostic/lancer">
@@ -71,6 +67,4 @@ export default function DiagnosticPage() {
     </PageShell>
   );
 }
-```
 
-Ensuite clique **Mark as resolved**.
