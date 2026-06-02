@@ -1,8 +1,18 @@
 import type { LucideIcon } from "lucide-react";
 
-export type DimensionKey = "credibilite" | "recommandation" | "communaute" | "rayonnement";
+export type DimensionKey =
+  | "lisibilite"
+  | "credibilite"
+  | "presence"
+  | "autorite"
+  | "recommandabilite";
 
-export type TrustLevel = "Fragile" | "Émergent" | "Solide" | "Référent" | "Remarquable";
+export type RecommendationLevel =
+  | "Illisible"
+  | "Repérable"
+  | "Crédible"
+  | "Prescripteur"
+  | "Incontournable";
 
 export type DiagnosticQuestion = {
   id: string;
@@ -21,12 +31,13 @@ export type DimensionDefinition = {
 };
 
 export type DiagnosticScores = {
+  scoreLisibilite: number;
   scoreCredibilite: number;
-  scoreRecommandation: number;
-  scoreCommunaute: number;
-  scoreRayonnement: number;
+  scorePresence: number;
+  scoreAutorite: number;
+  scoreRecommandabilite: number;
   indiceUnyko: number;
-  niveau: TrustLevel;
+  niveau: RecommendationLevel;
 };
 
 export type AnswerMap = Record<string, number>;

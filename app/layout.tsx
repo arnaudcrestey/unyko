@@ -7,9 +7,10 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-cor
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "UNYKO — Structurer la confiance",
-  description: "UNYKO révèle, mesure et renforce le capital confiance des organisations.",
-  metadataBase: new URL("https://unyko.fr")
+  title: "UNYKO — Indice de recommandabilité organisationnelle",
+  description:
+    "UNYKO mesure la visibilité, la lisibilité, la crédibilité, la présence, l'autorité et la recommandabilité des organisations à l'ère de l'intelligence artificielle.",
+  metadataBase: new URL("https://unyko.fr"),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
