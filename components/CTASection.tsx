@@ -12,19 +12,20 @@ export function CTASection() {
           </p>
 
           <h2 className="mt-5 font-serif text-4xl leading-none text-ivory md:text-6xl">
-            Être compris. Être crédible. Être recommandé.
+            Être compris. Inspirer confiance.
+            <br />
+            Être recommandé.
           </h2>
 
           <p className="mt-6 text-base leading-8 text-ivory/60">
-            Découvrez comment votre organisation est perçue aujourd&apos;hui et
-            identifiez les leviers qui renforcent sa visibilité, sa crédibilité
-            et sa capacité à être recommandée par les humains comme par les
-            intelligences artificielles.
+            Découvrez ce que votre organisation inspire aujourd&apos;hui :
+            sa clarté, sa crédibilité, sa réputation et ce qui donne envie de
+            la recommander.
           </p>
 
-          <div className="mt-9">
+          <div className="mt-10">
             <ButtonLink href="/diagnostic/lancer">
-              Lancer le diagnostic
+              Mesurer votre indice UNYKO
             </ButtonLink>
           </div>
         </div>

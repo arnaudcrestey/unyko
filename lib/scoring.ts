@@ -18,11 +18,11 @@ const dimensionScoreKeys: Record<
 };
 
 export function getRecommendationLevel(score: number): RecommendationLevel {
-  if (score <= 40) return "Illisible";
-  if (score <= 60) return "Repérable";
-  if (score <= 75) return "Crédible";
-  if (score <= 90) return "Prescripteur";
-  return "Incontournable";
+  if (score <= 40) return "Expertise invisible";
+  if (score <= 60) return "Organisation repérable";
+  if (score <= 75) return "Confiance émergente";
+  if (score <= 90) return "Référence montante";
+  return "Référence de confiance";
 }
 
 function average(values: number[]): number {

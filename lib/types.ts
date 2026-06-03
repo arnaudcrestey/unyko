@@ -8,11 +8,11 @@ export type DimensionKey =
   | "recommandabilite";
 
 export type RecommendationLevel =
-  | "Illisible"
-  | "Repérable"
-  | "Crédible"
-  | "Prescripteur"
-  | "Incontournable";
+  | "Expertise invisible"
+  | "Organisation repérable"
+  | "Confiance émergente"
+  | "Référence montante"
+  | "Référence de confiance";
 
 export type DiagnosticQuestion = {
   id: string;

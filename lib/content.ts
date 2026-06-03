@@ -12,12 +12,10 @@ import {
 import type { DimensionDefinition } from "@/lib/types";
 
 export const navItems = [
-  { href: "/diagnostic", label: "Diagnostic" },
   { href: "/methode", label: "Méthode" },
   { href: "/rapport", label: "Rapport" },
   { href: "/offres", label: "Offres" },
   { href: "/ecosysteme", label: "Écosystème" },
-  { href: "/vitrine", label: "Vitrine" },
 ] as const;
 
 export const dimensions: DimensionDefinition[] = [
@@ -26,13 +24,13 @@ export const dimensions: DimensionDefinition[] = [
     name: "Lisibilité",
     question: "Comprend-on clairement qui vous êtes ?",
     description:
-      "La capacité de l'organisation à être immédiatement comprise.",
+      "La capacité de l’organisation à rendre son activité, ses offres et sa différence immédiatement compréhensibles.",
     subDimensions: [
-      "clarté",
+      "activité",
       "positionnement",
-      "compréhension",
+      "offres",
+      "message",
       "différenciation",
-      "cohérence",
     ],
     Icon: ScanText,
   },
@@ -42,12 +40,12 @@ export const dimensions: DimensionDefinition[] = [
     name: "Crédibilité",
     question: "Pourquoi devrait-on vous croire ?",
     description:
-      "La cohérence perçue entre ce que l'organisation affirme, démontre et incarne.",
+      "La capacité de l’organisation à prouver ce qu’elle affirme par ses résultats, sa méthode et son professionnalisme.",
     subDimensions: [
       "preuves",
-      "expertise",
-      "références",
-      "cohérence",
+      "résultats",
+      "fiabilité",
+      "méthode",
       "professionnalisme",
     ],
     Icon: ShieldCheck,
@@ -58,13 +56,13 @@ export const dimensions: DimensionDefinition[] = [
     name: "Présence",
     question: "Existez-vous réellement dans votre environnement ?",
     description:
-      "La présence de l'organisation dans les espaces numériques et professionnels.",
+      "La capacité de l’organisation à être visible, identifiable et cohérente dans ses espaces numériques, professionnels et relationnels.",
     subDimensions: [
-      "site",
-      "contenus",
-      "linkedin",
-      "citations",
       "visibilité",
+      "contenus",
+      "réseaux",
+      "partenaires",
+      "écosystème",
     ],
     Icon: Eye,
   },
@@ -74,12 +72,12 @@ export const dimensions: DimensionDefinition[] = [
     name: "Autorité",
     question: "Êtes-vous identifié comme une référence ?",
     description:
-      "La reconnaissance de l'expertise et de la légitimité de l'organisation.",
+      "La reconnaissance de l’expertise, de la légitimité, du management et de la qualité de pilotage de l’organisation.",
     subDimensions: [
       "expertise",
-      "spécialisation",
+      "management",
       "légitimité",
-      "réputation",
+      "gouvernance",
       "leadership",
     ],
     Icon: Landmark,
@@ -90,13 +88,14 @@ export const dimensions: DimensionDefinition[] = [
     name: "Recommandabilité",
     question: "Pourquoi vous recommanderait-on ?",
     description:
-      "La capacité de l'organisation à être recommandée par les humains et les IA.",
+      "La capacité de l’organisation à être recommandée grâce à son expérience, ses relations, ses collaborateurs et la confiance qu’elle inspire.",
     subDimensions: [
-      "transmission",
-      "réputation",
       "confiance",
-      "citation",
-      "recommandation",
+      "expérience",
+      "collaborateurs",
+      "partenaires",
+      "ressources humaines",
+      "transmission",
     ],
     Icon: BadgeCheck,
   },
@@ -105,23 +104,24 @@ export const dimensions: DimensionDefinition[] = [
 export const ecosystem = [
   {
     name: "SYSTIA",
-    role: "Structurer l'activité",
-    question: "Comment l'activité devient-elle lisible et pilotable ?",
+    role: "Structurer l’activité",
+    question: "Comment l’activité devient-elle lisible, cohérente et pilotable ?",
     Icon: CircleDot,
   },
 
   {
     name: "ARHI",
-    role: "Structurer les humains",
-    question: "Comment les rôles, les talents et les décisions gagnent-ils en clarté ?",
+    role: "Comprendre les dynamiques humaines",
+    question:
+      "Comment le management, les rôles, les talents et les décisions gagnent-ils en clarté ?",
     Icon: Gem,
   },
 
   {
     name: "UNYKO",
-    role: "Développer la recommandabilité",
+    role: "Mesurer la confiance globale",
     question:
-      "Pourquoi une organisation devient-elle visible, crédible et recommandable ?",
+      "Pourquoi une organisation devient-elle lisible, crédible, présente, légitime et recommandable ?",
     Icon: Network,
   },
 ] as const;
@@ -129,26 +129,26 @@ export const ecosystem = [
 export const methodSteps = [
   [
     "Lire",
-    "Identifier les signaux qui rendent l'organisation visible, compréhensible et crédible.",
+    "Identifier les signaux qui rendent l’organisation compréhensible, crédible et digne de confiance.",
   ],
 
   [
     "Mesurer",
-    "Transformer la lisibilité, la présence, l'autorité et la recommandabilité en indicateurs exploitables.",
+    "Évaluer la lisibilité, la crédibilité, la présence, l’autorité et la recommandabilité de l’organisation.",
   ],
 
   [
-    "Prioriser",
-    "Définir les actions qui renforcent durablement la visibilité et la recommandation.",
+    "Comprendre",
+    "Relier les signaux observés à l’activité, au management, à la communication, aux ressources humaines et à l’environnement professionnel.",
   ],
 
   [
-    "Optimiser",
-    "Renforcer les signaux qui influencent la perception humaine et IA.",
+    "Orienter",
+    "Identifier les leviers prioritaires pour renforcer la confiance, la cohérence et la capacité de recommandation.",
   ],
 
   [
-    "Préparer l'IA",
-    "Développer la capacité de l'organisation à être comprise et recommandée par les moteurs conversationnels.",
+    "Préparer l’écosystème",
+    "Transformer le diagnostic en point d’entrée vers les bons leviers : structuration, dynamique humaine ou stratégie de confiance.",
   ],
 ] as const;
