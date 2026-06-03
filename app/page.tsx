@@ -45,7 +45,7 @@ export default function VitrinePage() {
         {/* Texte */}
         <p className="mt-8 max-w-[620px] px-1 text-[16px] font-light leading-8 text-ivory/70 sm:text-base md:mt-10 md:max-w-2xl md:text-lg md:leading-9">
           UNYKO mesure ce qui rend une organisation compréhensible, crédible et
-          recommandable à l'ère de l'intelligence artificielle.
+          recommandable à l&apos;ère de l&apos;intelligence artificielle.
         </p>
 
         {/* Bouton */}
