@@ -159,13 +159,13 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
       id: "cre-11",
       dimension: "credibilite",
       subDimension: "management",
-      text: "Votre management renforce-t-il la confiance dans votre organisation ?",
+      text: "Votre façon de diriger ou d'organiser votre activité renforce-t-elle la confiance ?",
     },
     {
       id: "cre-12",
       dimension: "credibilite",
       subDimension: "climat",
-      text: "Votre climat interne contribue-t-il à une bonne expérience client ou partenaire ?",
+      text: "Votre manière de travailler contribue-t-elle à une expérience positive pour vos clients ou partenaires ?",
     },
     {
       id: "cre-13",
@@ -408,13 +408,13 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
       id: "rec-06",
       dimension: "recommandabilite",
       subDimension: "management",
-      text: "Votre management donne-t-il envie à vos collaborateurs de parler positivement de vous ?",
+      text: "Les personnes qui travaillent avec vous recommanderaient-elles spontanément votre organisation ?",
     },
     {
       id: "rec-07",
       dimension: "recommandabilite",
       subDimension: "interne",
-      text: "Vos équipes recommanderaient-elles votre organisation à un client ou à un partenaire ?",
+      text: "Les personnes qui collaborent avec vous recommanderaient-elles votre organisation à d'autres ?",
     },
     {
       id: "rec-08",
@@ -438,7 +438,7 @@ export const questionBanks: Record<DimensionKey, DiagnosticQuestion[]> = {
       id: "rec-11",
       dimension: "recommandabilite",
       subDimension: "IA",
-      text: "Qu’est-ce qui donnerait envie de vous recommander plutôt qu’un autre ?",
+      text: "Est-il facile d'expliquer pourquoi vous recommander plutôt qu'un autre acteur de votre secteur ?",
     },
     {
       id: "rec-12",
