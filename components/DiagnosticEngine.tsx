@@ -703,7 +703,7 @@ useEffect(() => {
 
         <div className="mt-6 flex items-center justify-between gap-4 text-xs text-ivory/42 sm:text-sm">
           <span>Répondez selon la perception réelle.</span>
-          <ArrowRight size={16} className="shrink-0 text-gold/70" />
+         
         </div>
       </div>
     </motion.div>
