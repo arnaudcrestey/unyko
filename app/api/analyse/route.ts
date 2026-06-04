@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
+import nodemailer from "nodemailer";
 
 type AnalyseResponse = {
   lecture: string;
@@ -54,12 +55,68 @@ function extractJson(content: string): AnalyseResponse {
   }
 }
 
+async function sendAdminNotification(body: unknown, analyse: AnalyseResponse) {
+  try {
+    if (
+      !process.env.SMTP_HOST ||
+      !process.env.SMTP_PORT ||
+      !process.env.SMTP_USER ||
+      !process.env.SMTP_PASS ||
+      !process.env.SMTP_FROM ||
+      !process.env.ADMIN_EMAIL
+    ) {
+      console.warn("Notification UNYKO non envoyée : variables SMTP manquantes.");
+      return;
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: Number(process.env.SMTP_PORT) === 465,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM,
+      to: process.env.ADMIN_EMAIL,
+      subject: "Nouveau diagnostic UNYKO terminé",
+      text: `
+Un visiteur vient de terminer un diagnostic UNYKO.
+
+ANALYSE GÉNÉRÉE
+
+Lecture :
+${analyse.lecture}
+
+Risque :
+${analyse.risque}
+
+Levier :
+${analyse.levier}
+
+Orientation :
+${analyse.orientation}
+
+DONNÉES DU DIAGNOSTIC
+
+${JSON.stringify(body, null, 2)}
+      `,
+    });
+  } catch (error) {
+    console.error("Erreur notification email UNYKO:", error);
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const apiKey = process.env.OPENAI_API_KEY;
 
     if (!apiKey) {
+      await sendAdminNotification(body, fallback);
       return NextResponse.json(fallback);
     }
 
@@ -143,7 +200,11 @@ Réponds uniquement avec ce JSON exact :
     });
 
     const content = response.choices[0]?.message?.content ?? "";
-    return NextResponse.json(extractJson(content));
+    const analyse = extractJson(content);
+
+    await sendAdminNotification(body, analyse);
+
+    return NextResponse.json(analyse);
   } catch (error) {
     console.error("Erreur analyse UNYKO:", error);
     return NextResponse.json(fallback);
