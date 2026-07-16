@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Arnaud Crestey",
-      url: siteUrl,
+      url: "https://www.arnaudcrestey.com",
     },
   ],
 
@@ -115,6 +115,53 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": `${siteUrl}/#application`,
+      name: "UNYKO",
+      url: siteUrl,
+      image: `${siteUrl}/opengraph-image.jpg`,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      inLanguage: "fr-FR",
+      description:
+        "UNYKO mesure la visibilité, la lisibilité, la crédibilité, la présence, l'autorité et la recommandabilité des organisations à l'ère de l'intelligence artificielle.",
+      creator: {
+        "@type": "Person",
+        "@id": "https://www.arnaudcrestey.com/#person",
+        name: "Arnaud Crestey",
+        url: "https://www.arnaudcrestey.com",
+      },
+      featureList: [
+        "Mesure de la visibilité",
+        "Analyse de la lisibilité",
+        "Évaluation de la crédibilité",
+        "Analyse de la présence numérique",
+        "Mesure de l'autorité",
+        "Indice de recommandabilité",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "UNYKO",
+      description:
+        "Indice de recommandabilité organisationnelle à l'ère de l'intelligence artificielle.",
+      inLanguage: "fr-FR",
+      publisher: {
+        "@id": "https://www.arnaudcrestey.com/#person",
+      },
+      mainEntity: {
+        "@id": `${siteUrl}/#application`,
+      },
+    },
+  ],
+};
+
 type RootLayoutProps = Readonly<{
   children: ReactNode;
 }>;
@@ -124,6 +171,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="fr" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         {children}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   );
