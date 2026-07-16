@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://unyko.fr";
+const baseUrl = "https://unyko.arnaudcrestey.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
