@@ -15,7 +15,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = "https://unyko.fr";
+const siteUrl = "https://unyko.arnaudcrestey.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
